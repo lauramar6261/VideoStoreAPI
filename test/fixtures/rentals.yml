@@ -5,9 +5,11 @@ one:
   movie: one
   checkout_date: 2018-11-05
   due_date: 2018-18-05
+  active?: true
 
 two:
   customer: two
   movie: one
   checkout_date: 2018-11-05
   due_date: 2018-18-05
+  active?: false
