@@ -8,7 +8,7 @@ class Rental < ApplicationRecord
 
   def initialize(attributes={})
     super
-    self.active? = true
+    self.active = true
   end
 
 end

@@ -4,6 +4,10 @@ describe Movie do
   let(:movie_one) {movies(:one)}
 
   describe "validations" do
+    it "is valid with correct data" do
+      movie_one.valid?.must_equal true
+    end
+
     it "requires a title" do
       movie_one.title = nil
       movie_one.save

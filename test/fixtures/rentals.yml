@@ -4,19 +4,19 @@ one:
   customer: one
   movie: one
   checkout_date: 2018-11-05
-  due_date: 2018-18-05
-  active?: true
+  due_date: 2018-11-12
+  active: true
 
 two:
   customer: two
   movie: one
   checkout_date: 2018-11-05
-  due_date: 2018-18-05
-  active?: false
+  due_date: 2018-11-12
+  active: false
 
 three:
   customer: two
   movie: two
   checkout_date: 2018-11-05
-  due_date: 2018-18-05
-  active?: true
+  due_date: 2018-11-12
+  active: true
