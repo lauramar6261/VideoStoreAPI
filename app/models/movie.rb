@@ -10,8 +10,7 @@ class Movie < ApplicationRecord
   has_many :rentals
   has_many :customers, through: :rentals
 
-  def initialize(attributes={})
-    super
+  before_create do
     self.available_inventory = self.inventory
   end
 end

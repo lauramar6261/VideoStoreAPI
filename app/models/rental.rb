@@ -5,10 +5,6 @@ class Rental < ApplicationRecord
   belongs_to :customer
   belongs_to :movie
 
-
-  def initialize(attributes={})
-    super
-    self.active = true
-  end
+  attribute :active, default: true
 
 end
