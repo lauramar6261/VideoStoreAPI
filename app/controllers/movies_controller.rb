@@ -7,4 +7,8 @@ class MoviesController < ApplicationController
 
   def create
   end
+
+  def zomg
+    render json: {message: "it works!"}, status: :ok
+  end
 end
