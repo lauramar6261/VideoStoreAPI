@@ -2,24 +2,24 @@ require 'test_helper'
 
 describe Customer do
   let (:customer) {customers(:one)}
+  let (:customertwo) {customers(:two)}
 
-  # describe "relations" do
-  #   it "has a list of rentals" do
-  #     dan = users(:dan)
-  #     dan.must_respond_to :votes
-  #     dan.votes.each do |vote|
-  #       vote.must_be_kind_of Vote
-  #     end
-  #   end
-  #
-  #   it "has a list of ranked works" do
-  #     dan = users(:dan)
-  #     dan.must_respond_to :ranked_works
-  #     dan.ranked_works.each do |work|
-  #       work.must_be_kind_of Work
-  #     end
-  #   end
-  # end
+
+  describe "relations" do
+    it "has a list of rentals" do
+      customertwo.must_respond_to :rentals
+      customertwo.rentals.each do |rental|
+        rental.must_be_kind_of Rental
+      end
+    end
+
+    it "has a list of movies" do
+      customertwo.must_respond_to :movies
+      customertwo.movies.each do |movie|
+        movie.must_be_kind_of Movie
+      end
+    end
+  end
 
   describe "validations" do
     it "requires a name - negative" do
