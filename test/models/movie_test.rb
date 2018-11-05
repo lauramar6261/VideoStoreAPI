@@ -16,7 +16,6 @@ require "test_helper"
 
 describe Movie do
   let(:movie_one) {movies(:one)}
-  let(:movie_two) {movies(:two)}
 
   describe "validations" do
     it "requires a title" do
@@ -91,6 +90,45 @@ describe Movie do
       movie_one.errors.messages.must_include :available_inventory
     end
 
+  end
+
+  describe 'relationships' do
+    it 'has many rentals' do
+      movie_one.must_respond_to :rentals
+
+      movie_one.rentals.each do |rental|
+        rental.must_be_kind_of Rental
+      end
+    end
+
+    it 'has many customers through rentals' do
+      movie_one.must_respond_to :customers
+
+      movie_one.customers.each do |customer|
+        customer.must_be_kind_of Customer
+      end
+    end
+
+    it 'returns an empty set if there are no rentals' do
+      Rental.all.each do |rental|
+        rental.destroy
+      end
+
+      movie_one.rentals.any?.must_equal false
+
+      movie_one.customers.any?.must_equal false
+    end
+  end
+
+  describe 'custom methods' do
+    it 'initializes available inventory based off inventory input' do
+      movie = Movie.create(title:"Robots Of Eternity",
+                        overview:"The laid-back life of a woman is going in a different direction as a childhood friend enters her life.",
+                        release_date:"2007-10-10",
+                        inventory:7)
+      movie.must_respond_to :available_inventory
+      movie.available_inventory.must_equal movie.inventory
+    end
   end
 
 

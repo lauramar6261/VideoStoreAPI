@@ -4,10 +4,10 @@ one:
   customer: one
   movie: one
   checkout_date: 2018-11-05
-  due_date: 2018-11-05
+  due_date: 2018-18-05
 
 two:
   customer: two
-  movie: two
+  movie: one
   checkout_date: 2018-11-05
-  due_date: 2018-11-05
+  due_date: 2018-18-05
