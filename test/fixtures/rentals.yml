@@ -13,3 +13,10 @@ two:
   checkout_date: 2018-11-05
   due_date: 2018-18-05
   active?: false
+
+three:
+  customer: two
+  movie: two
+  checkout_date: 2018-11-05
+  due_date: 2018-18-05
+  active?: true
