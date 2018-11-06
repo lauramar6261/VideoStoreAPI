@@ -33,6 +33,25 @@ describe CustomersController do
         expect(customer.keys.length).must_equal keys.length
       end
     end
+
+    it "can sort customers based on params" do
+      sort_values = %w(name registered_at postal_code)
+
+      sort_values.each do |value|
+      get customers_path, params: {"sort" => value}
+
+      body = JSON.parse(response.body)
+
+        (body.length - 1).times do |i|
+          expect(body[i][value]).must_be :<, body[i+1][value]
+        end
+      end
+    end
+
+       # registered_at postal_code)
+
+
+
   end
 
 end
