@@ -100,4 +100,15 @@ describe Customer do
       customer.valid?.must_equal true
     end
   end
+
+  describe 'custom methods' do
+    it 'movies_checked_out_count works' do
+      customer.movies_checked_out_count.must_equal 1
+
+      customertwo.movies_checked_out_count.must_equal 1
+      customertwo.rentals.count.must_equal 2
+
+    end
+
+  end
 end

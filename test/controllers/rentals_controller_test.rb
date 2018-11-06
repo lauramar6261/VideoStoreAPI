@@ -4,7 +4,7 @@ describe RentalsController do
   let(:rental_params) {
                       {
                         customer_id: customers(:one).id,
-                        movie_id: movies(:one).id,
+                        movie_id: movies(:one).id
                       }
                     }
   it "checkout path is a working route and returns JSON" do
