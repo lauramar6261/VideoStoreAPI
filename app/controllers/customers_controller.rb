@@ -1,9 +1,6 @@
 class CustomersController < ApplicationController
   def index
     customers = Customer.all
-    # customers.each do |customer|
-    #
-    # end
     if customers.nil?
       render json: {ok:false, message: 'not_found'}, status: :not_found
     else
