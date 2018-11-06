@@ -4,11 +4,7 @@ class RentalsController < ApplicationController
     customer = Customer.find_by(id: rental_params[:customer_id])
     checkout_date = DateTime.now
     due_date = checkout_date + 7
-    rental = Rental.new
-    rental.customer = customer
-    rental.checkout_date = checkout_date
-    rental.due_date = due_date
-    rental.movie = movie
+    rental = Rental.new(customer: customer, checkout_date: checkout_date, due_date: due_date, movie: movie)
 
     if rental.save
       render json: rental.as_json(only: [:id]), status: :ok
@@ -18,6 +14,7 @@ class RentalsController < ApplicationController
   end
 
   def checkin
+    rental = Rental.where
   end
 
   def rental_params
