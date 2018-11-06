@@ -40,14 +40,6 @@ describe Movie do
       movie_one.errors.messages.must_include :inventory
     end
 
-    it "requires an available inventory entry" do
-      movie_one.available_inventory = nil
-      movie_one.save
-
-      movie_one.valid?.must_equal false
-      movie_one.errors.messages.must_include :available_inventory
-    end
-
     it "inventory must be numeric and non-negative" do
       movie_one.inventory = "applesauce"
       movie_one.save
@@ -64,21 +56,6 @@ describe Movie do
       movie_one.errors.messages.must_include :inventory
     end
 
-    it "available inventory must be numeric and non-negative" do
-      movie_one.available_inventory = "potatoes"
-      movie_one.save
-      movie_one.valid?.must_equal false
-      movie_one.errors.messages.must_include :available_inventory
-
-      movie_one.available_inventory = 0
-      movie_one.save
-      movie_one.valid?.must_equal true
-
-      movie_one.available_inventory = -1
-      movie_one.save
-      movie_one.valid?.must_equal false
-      movie_one.errors.messages.must_include :available_inventory
-    end
 
   end
 
