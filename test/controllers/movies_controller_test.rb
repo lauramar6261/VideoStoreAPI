@@ -112,7 +112,7 @@ describe MoviesController do
 
       expect(body).must_be_kind_of Hash
       expect(body).must_include "errors"
-      expect(body["errors"]).must_include "title"
+      expect(body["errors"]["movie"]).must_include "title"
       must_respond_with :bad_request
     end
 

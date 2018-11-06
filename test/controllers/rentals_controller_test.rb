@@ -49,8 +49,7 @@ describe RentalsController do
     body = JSON.parse(response.body)
 
     expect(body).must_be_kind_of Hash
-    expect(body["ok"]).must_equal false
-    expect(body["message"]).must_include "customer"
+    expect(body["errors"]).must_include "customer"
     must_respond_with :bad_request
   end
 
@@ -74,7 +73,7 @@ describe RentalsController do
     body = JSON.parse(response.body)
 
     expect(body).must_be_kind_of Hash
-    expect(body["message"]).must_include "rental not found"
+    expect(body["errors"]).must_include "rental"
     must_respond_with :bad_request
   end
 
