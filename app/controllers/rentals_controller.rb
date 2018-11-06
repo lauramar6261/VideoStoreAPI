@@ -14,7 +14,13 @@ class RentalsController < ApplicationController
   end
 
   def checkin
-    rental = Rental.where
+    rental = Rental.find_by(movie_id: rental_params[:movie_id], customer_id: rental_params[:customer_id])
+    rental.active = false
+    if rental.save
+      render json: rental.as_json(only: [:id]), status: :ok
+    else
+      render json: {ok: false, message: rental.errors.messages}, status: :bad_request
+    end
   end
 
   def rental_params
