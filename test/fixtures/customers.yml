@@ -1,19 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  registered_at: 2018-11-05 11:23:20
-  address: MyString
+  name: Adam Ant
+  registered_at: 2015-11-05 11:23:20
+  address: 1
   city: MyString
   state: MyString
-  postal_code: MyString
+  postal_code: 10001
   phone: MyString
 
 two:
-  name: MyString
+  name: Billy Budd
   registered_at: 2018-11-05 11:23:20
   address: MyString
   city: MyString
   state: MyString
-  postal_code: MyString
+  postal_code: 90210
   phone: MyString
