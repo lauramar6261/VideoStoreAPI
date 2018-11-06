@@ -46,6 +46,22 @@ describe MoviesController do
       must_respond_with :success
     end
 
+    it "responds with a 404 message if no movie is found" do
+      get movie_path(-1)
+      must_respond_with :not_found
+    end
+
+    it "returns a movie with exactly the required fields" do
+      keys = %w(available_inventory inventory overview release_date title)
+
+      get movie_path(movie_one.id)
+
+      body = JSON.parse(response.body)
+
+      expect(body.keys.sort).must_equal keys
+      expect(body.keys.length).must_equal keys.length
+    end
+
   end
 
   describe 'create' do
