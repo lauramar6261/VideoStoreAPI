@@ -26,7 +26,7 @@ class RentalsController < ApplicationController
               render json: {"errors": {"movie": rental.errors.messages}}, status: :bad_request
             end
         else
-          render json: {"errors": {"movie": "#{movie.title} is out of stock"}, status: :bad_request
+          render json: {"errors": {"movie": "#{movie.title} is out of stock"}}, status: :bad_request
         end
       end
     end
@@ -37,12 +37,13 @@ class RentalsController < ApplicationController
     if rental
       rental.active = false
       if rental.save
-      render json: rental.as_json(only: [:id]), status: :ok
+        rental.movie.available_inventory += 1
+        render json: rental.as_json(only: [:id]), status: :ok
       else
-      render json: {ok: false, message: rental.errors.messages}, status: :bad_request
+        render json: {"errors": {"rental": rental.errors.messages}}, status: :bad_request
       end
     else
-      render json: {ok: false, message: "rental not found"}, status: :bad_request
+      render json: {"errors": {"rental": "rental not found"}}, status: :bad_request
     end
   end
 
