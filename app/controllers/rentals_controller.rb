@@ -2,14 +2,6 @@ class RentalsController < ApplicationController
   def checkout
     movie = Movie.find_by(id: rental_params[:movie_id])
 
-    customer = Customer.find_by(id: rental_params[:customer_id])
-    checkout_date = Date.today
-    due_date = checkout_date + 7
-    rental = Rental.new(customer: customer, checkout_date: checkout_date, due_date: due_date, movie: movie)
-
-    if rental.save
-      render json: rental.as_json(only: [:id]), status: :ok
-
     if !movie
       render json: {"errors": {"movie": ["Movie not found"]}}, status: :bad_request
 
