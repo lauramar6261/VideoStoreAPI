@@ -65,16 +65,55 @@ describe MoviesController do
   end
 
   describe 'create' do
+    let(:movie_params) {
+                        {
+                          title: "a movie",
+                          overview: "a description",
+                          release_date: Date.today,
+                          inventory: 5
+                        }
+                      }
 
-    it "works with valid data and returns JSON" do
-      post movies_path, params: {
-                                  title: "A movie",
-                                  overview: "a description",
-                                  release_date: Date.today,
-                                  inventory: 5
-                                }
+    it "returns JSON" do
+      post movies_path, params: movie_params
       expect(response.header['Content-Type']).must_include 'json'
       must_respond_with :success
+    end
+
+
+    it "creates a new movie given valid data" do
+      expect {
+          post movies_path, params: movie_params
+        }.must_change "Movie.count", 1
+
+      body = JSON.parse(response.body)
+      expect(body).must_be_kind_of Hash
+      expect(body).must_include "id"
+
+      movie = Movie.find(body["id"].to_i)
+
+      expect(movie.title).must_equal movie_params[:title]
+      expect(movie.overview).must_equal movie_params[:overview]
+      expect(movie.release_date).must_equal movie_params[:release_date]
+      expect(movie.inventory).must_equal movie_params[:inventory]
+      expect(movie.available_inventory).must_equal movie_params[:inventory]
+      must_respond_with :success
+    end
+
+    it "returns an error for invalid movie data" do
+
+      movie_params[:title] = nil
+
+      expect {
+            post movies_path, params: movie_params
+          }.wont_change "Movie.count"
+
+      body = JSON.parse(response.body)
+
+      expect(body).must_be_kind_of Hash
+      expect(body).must_include "errors"
+      expect(body["errors"]).must_include "title"
+      must_respond_with :bad_request
     end
 
   end
