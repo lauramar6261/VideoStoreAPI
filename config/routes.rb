@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   post '/movies', to: 'movies#create'
   get '/movies/:id', to: 'movies#show', as: 'movie'
   get '/customers', to: 'customers#index', as: 'customers'
-  get '/customers/:id/current', to: 'customers#current', as: 'current'
+  get '/customers/:id/current', to: 'customers#current', as: 'customer_current'
   get '/zomg', to: 'movies#zomg', as: 'zomg'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
