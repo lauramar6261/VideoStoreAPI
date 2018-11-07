@@ -5,6 +5,17 @@ class ApplicationController < ActionController::API
 
   private
 
+  def sort_array(array, keyword_array)
+    return array.sort_by{|cust| cust.send(sort_param)} if sort_param && sort_param.in?(keyword_array)
+    return array
+  end
+
+  def paginate_array(array)
+    page_param ||= 1
+    return array.paginate(:page => page_param, :per_page => num_page_param) if page_param && num_page_param
+    return array
+  end
+
   def sort_param
     params[:sort]
   end
