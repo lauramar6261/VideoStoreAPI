@@ -134,10 +134,6 @@ describe RentalsController do
       body = JSON.parse(response.body)
       expect(body["errors"]).must_include "overdues"
 
-
-
-
-
     end
 
   end
