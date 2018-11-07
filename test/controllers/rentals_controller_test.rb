@@ -84,6 +84,8 @@ describe RentalsController do
   end
 
   describe "overdue" do
+    keys = %w(checkout_date customer_id due_date movie_id name postal_code title)
+
     it 'renders json' do
       get overdue_path
       expect(response.header['Content-Type']).must_include 'json'
@@ -103,22 +105,14 @@ describe RentalsController do
     end
 
     it "returns overdues with exactly the required keys" do
-      overdue_keys = %w(customer movie rental)
-      customer_keys = %w(id name postal_code)
-      rental_keys = %w(checkout_date due_date)
-      movie_keys = %w(id title)
 
       get overdue_path
 
       body = JSON.parse(response.body)
 
       body.each do |overdue|
-        expect(overdue.keys.sort).must_equal overdue_keys
-        expect(overdue.keys.length).must_equal overdue_keys.length
-
-        expect(overdue["customer"].keys.sort).must_equal customer_keys
-        expect(overdue["movie"].keys.sort).must_equal movie_keys
-        expect(overdue["rental"].keys.sort).must_equal rental_keys
+        expect(overdue.keys.sort).must_equal keys
+        expect(overdue.keys.length).must_equal keys.length
 
       end
     end
@@ -134,6 +128,18 @@ describe RentalsController do
       body = JSON.parse(response.body)
       expect(body["errors"]).must_include "overdues"
 
+    end
+
+    it "sorts overdues on any key" do
+      keys.each do |key|
+      get overdue_path, params: {"sort" => key}
+
+      body = JSON.parse(response.body)
+
+        (body.length - 1).times do |i|
+          expect(body[i][key]).must_be :<=, body[i+1][key]
+        end
+      end
     end
 
   end

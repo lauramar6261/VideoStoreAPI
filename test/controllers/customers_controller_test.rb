@@ -43,7 +43,7 @@ describe CustomersController do
       body = JSON.parse(response.body)
 
         (body.length - 1).times do |i|
-          expect(body[i][value]).must_be :<, body[i+1][value]
+          expect(body[i][value]).must_be :<=, body[i+1][value]
         end
       end
     end
