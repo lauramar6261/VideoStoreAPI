@@ -20,3 +20,10 @@ three:
   checkout_date: 2011-11-05
   due_date: 2011-11-12
   active: true
+
+four:
+  customer: two
+  movie: three
+  checkout_date: 2011-11-03
+  due_date: 2011-11-10
+  active: true

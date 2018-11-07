@@ -37,14 +37,11 @@ class CustomersController < ApplicationController
 
       else
         render json: {"errors": {"customer": ["No current rentals"]}}, status: :not_found
-
       end
-
 
     else
       render json: {"errors": {"customer": ["Customer not found"]}}, status: :not_found
     end
-
 
   end
 end
