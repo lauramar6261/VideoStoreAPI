@@ -57,16 +57,18 @@ class RentalsController < ApplicationController
         movie = rental.movie
         customer = rental.customer
         overdues << {
-            movie_id: movie.id,
-            title: movie.title,
-            customer_id: customer.id,
-            name: customer.name,
-            postal_code: customer.postal_code,
-            checkout_date: rental.checkout_date,
-            due_date: rental.due_date
+            "movie_id" => movie.id,
+            "title" => movie.title,
+            "customer_id" => customer.id,
+            "name" => customer.name,
+            "postal_code" => customer.postal_code,
+            "checkout_date" => rental.checkout_date,
+            "due_date" => rental.due_date
         }
-
       end
+
+      overdues = sort_array(overdues, %w(movie_id title customer_id name postal_code checkout_date due_date))
+      overdues = paginate_array(overdues)
       render json: overdues.as_json, status: :ok
     else
       render json: {"errors": {"overdues": "no overdues found"}}

@@ -5,8 +5,10 @@ class ApplicationController < ActionController::API
 
   private
 
+
   def sort_array(array, keyword_array)
-    return array.sort_by{|cust| cust.send(sort_param)} if sort_param && sort_param.in?(keyword_array)
+    return array.sort_by{|item| item.send(sort_param)} if sort_param && sort_param.in?(keyword_array) && array[0].respond_to?(sort_param)
+    return array.sort_by{|item| item[sort_param]} if sort_param && sort_param.in?(keyword_array) && array[0][sort_param]
     return array
   end
 
