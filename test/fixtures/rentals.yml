@@ -27,3 +27,10 @@ four:
   checkout_date: 2011-11-03
   due_date: 2011-11-10
   active: true
+
+five:
+  customer: two
+  movie: four
+  checkout_date: 2016-11-05
+  due_date: 2016-11-12
+  active: false
