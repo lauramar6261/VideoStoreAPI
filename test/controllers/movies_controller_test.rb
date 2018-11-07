@@ -154,6 +154,59 @@ describe MoviesController do
       expect(body).must_be_kind_of Hash
       expect(body.first).must_include "errors"
     end
+
+    # it "returns error for valid movie, but not currently checkout" do
+    #   id = movies(:four).id
+    #
+    #   expect {
+    #     get current_path(id)
+    #   }.wont_change "Movie.count"
+    #
+    #   body = JSON.parse(response.body)
+    #
+    #   expect(body.first).must_include "errors"
+    # end
+  end
+
+  describe 'custom method: history' do
+    let(:id) {movies(:one).id }
+    it "is a real working route and returns JSON" do
+      get history_path(id)
+      expect(response.header['Content-Type']).must_include 'json'
+      must_respond_with :success
+    end
+
+    it "returns an Array" do
+      id = movies(:one).id
+      get history_path(id)
+      body = JSON.parse(response.body)
+      expect(body).must_be_kind_of Array
+    end
+
+    it "returns customer of past checked out movie - valid data" do
+      expect {
+        get history_path(id)
+      }.wont_change "Movie.count"
+
+      body = JSON.parse(response.body)
+
+      expect(body.first).must_include "customer_id"
+    end
+
+    it "returns error for invalid movie" do
+      id = 0
+
+      expect {
+        get history_path(id)
+      }.wont_change "Movie.count"
+
+      body = JSON.parse(response.body)
+
+      expect(body).must_be_kind_of Hash
+      expect(body.first).must_include "errors"
+    end
+
+
   end
 
 end
