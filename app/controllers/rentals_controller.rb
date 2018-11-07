@@ -57,9 +57,13 @@ class RentalsController < ApplicationController
         movie = rental.movie
         customer = rental.customer
         overdues << {
-            "movie": movie.as_json(only: [:id, :title]),
-            "customer": customer.as_json(only: [:id, :name, :postal_code]),
-            "rental": rental.as_json(only: [:checkout_date, :due_date])
+            movie_id: movie.id,
+            title: movie.title,
+            customer_id: customer.id,
+            name: customer.name,
+            postal_code: customer.postal_code,
+            checkout_date: rental.checkout_date,
+            due_date: rental.due_date
         }
 
       end
