@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   get '/customers/:id/history', to: 'customers#history', as: 'customer_history'
   get '/zomg', to: 'movies#zomg', as: 'zomg'
   get '/movies/:id/current', to: 'movies#current', as: 'current'
+  get '/movies/:id/history', to: 'movies#history', as: 'history'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
