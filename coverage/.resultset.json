@@ -1,7 +1,7 @@
 {
   "MiniTest": {
     "coverage": {
-      "/Users/ada/Documents/Laura/wk14/VideoStoreAPI/app/controllers/customers_controller.rb": [
+      "/Users/danieladiiorio/ada/week-14b/VideoStoreAPI/app/controllers/customers_controller.rb": [
         1,
         1,
         8,
@@ -72,7 +72,7 @@
         null,
         null
       ],
-      "/Users/ada/Documents/Laura/wk14/VideoStoreAPI/app/controllers/application_controller.rb": [
+      "/Users/danieladiiorio/ada/week-14b/VideoStoreAPI/app/controllers/application_controller.rb": [
         1,
         1,
         null,
@@ -94,11 +94,11 @@
         null,
         null,
         1,
-        235,
+        245,
         null,
         null,
         1,
-        62,
+        66,
         3,
         null,
         null,
@@ -106,7 +106,7 @@
         null,
         null,
         1,
-        108,
+        110,
         9,
         null,
         null,
@@ -114,7 +114,7 @@
         null,
         null
       ],
-      "/Users/ada/Documents/Laura/wk14/VideoStoreAPI/test/controllers/movies_controller_test.rb": [
+      "/Users/danieladiiorio/ada/week-14b/VideoStoreAPI/test/controllers/movies_controller_test.rb": [
         1,
         null,
         1,
@@ -328,7 +328,7 @@
         null,
         null
       ],
-      "/Users/ada/Documents/Laura/wk14/VideoStoreAPI/app/controllers/movies_controller.rb": [
+      "/Users/danieladiiorio/ada/week-14b/VideoStoreAPI/app/controllers/movies_controller.rb": [
         1,
         null,
         1,
@@ -426,7 +426,7 @@
         null,
         null
       ],
-      "/Users/ada/Documents/Laura/wk14/VideoStoreAPI/test/controllers/rentals_controller_test.rb": [
+      "/Users/danieladiiorio/ada/week-14b/VideoStoreAPI/test/controllers/rentals_controller_test.rb": [
         1,
         null,
         1,
@@ -607,7 +607,7 @@
         null,
         null
       ],
-      "/Users/ada/Documents/Laura/wk14/VideoStoreAPI/app/controllers/rentals_controller.rb": [
+      "/Users/danieladiiorio/ada/week-14b/VideoStoreAPI/app/controllers/rentals_controller.rb": [
         1,
         1,
         5,
@@ -693,7 +693,7 @@
         null,
         null
       ],
-      "/Users/ada/Documents/Laura/wk14/VideoStoreAPI/test/models/customer_test.rb": [
+      "/Users/danieladiiorio/ada/week-14b/VideoStoreAPI/test/models/customer_test.rb": [
         1,
         null,
         1,
@@ -809,7 +809,7 @@
         null,
         null
       ],
-      "/Users/ada/Documents/Laura/wk14/VideoStoreAPI/app/models/customer.rb": [
+      "/Users/danieladiiorio/ada/week-14b/VideoStoreAPI/app/models/customer.rb": [
         1,
         1,
         1,
@@ -820,12 +820,12 @@
         null,
         null
       ],
-      "/Users/ada/Documents/Laura/wk14/VideoStoreAPI/app/models/application_record.rb": [
+      "/Users/danieladiiorio/ada/week-14b/VideoStoreAPI/app/models/application_record.rb": [
         1,
         1,
         null
       ],
-      "/Users/ada/Documents/Laura/wk14/VideoStoreAPI/test/models/movie_test.rb": [
+      "/Users/danieladiiorio/ada/week-14b/VideoStoreAPI/test/models/movie_test.rb": [
         1,
         null,
         1,
@@ -929,7 +929,7 @@
         null,
         null
       ],
-      "/Users/ada/Documents/Laura/wk14/VideoStoreAPI/app/models/movie.rb": [
+      "/Users/danieladiiorio/ada/week-14b/VideoStoreAPI/app/models/movie.rb": [
         1,
         1,
         1,
@@ -945,7 +945,7 @@
         null,
         null
       ],
-      "/Users/ada/Documents/Laura/wk14/VideoStoreAPI/test/models/rental_test.rb": [
+      "/Users/danieladiiorio/ada/week-14b/VideoStoreAPI/test/models/rental_test.rb": [
         1,
         null,
         1,
@@ -1011,7 +1011,7 @@
         null,
         null
       ],
-      "/Users/ada/Documents/Laura/wk14/VideoStoreAPI/app/models/rental.rb": [
+      "/Users/danieladiiorio/ada/week-14b/VideoStoreAPI/app/models/rental.rb": [
         1,
         1,
         1,
@@ -1024,6 +1024,6 @@
         null
       ]
     },
-    "timestamp": 1541623985
+    "timestamp": 1541624426
   }
 }
