@@ -105,8 +105,8 @@ describe Customer do
     it 'movies_checked_out_count works' do
       customer.movies_checked_out_count.must_equal 1
 
-      customertwo.movies_checked_out_count.must_equal 1
-      customertwo.rentals.count.must_equal 2
+      customertwo.movies_checked_out_count.must_equal 2
+      customertwo.rentals.count.must_equal 4
 
     end
 

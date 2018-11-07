@@ -13,3 +13,17 @@ two:
   release_date: 1992-11-05
   inventory: 10
   available_inventory: 10
+
+three:
+  title: Three Men and a Baby
+  overview: Steve Guttenberg, Tom Selleck
+  release_date: 1987-11-05
+  inventory: 12
+  available_inventory: 10
+
+four:
+  title: Four Weddings and a Funeral
+  overview: Hugh Grant, Andie MacDowell
+  release_date: 1991-11-05
+  inventory: 12
+  available_inventory: 10

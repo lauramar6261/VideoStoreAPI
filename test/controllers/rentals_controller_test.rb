@@ -84,7 +84,7 @@ describe RentalsController do
   end
 
   describe "overdue" do
-    keys = %w(checkout_date customer_id due_date movie_id name postal_code title)
+    let (:keys) {%w(checkout_date customer_id due_date movie_id name postal_code title)}
 
     it 'renders json' do
       get overdue_path
