@@ -48,10 +48,13 @@ describe CustomersController do
       end
     end
 
-       # registered_at postal_code)
+    it "can limit the customers per page" do
+      get customers_path, params: {"p" => 1, "n" => 2}
 
+      body = JSON.parse(response.body)
 
-
+      expect(body.length).must_equal 2
+    end
   end
 
 end
