@@ -48,7 +48,31 @@ class RentalsController < ApplicationController
     end
   end
 
+  def overdue
+    rentals = Rental.where(["active = ? and due_date < ?", true, Date.today])
+
+    if rentals.any?
+      overdues = []
+      rentals.each do |rental|
+        movie = rental.movie
+        customer = rental.customer
+        overdues << {
+            "movie": movie.as_json(only: [:id, :title]),
+            "customer": customer.as_json(only: [:id, :name, :postal_code]),
+            "rental": rental.as_json(only: [:checkout_date, :due_date])
+        }
+
+      end
+      render json: overdues.as_json, status: :ok
+    else
+      render json: {"errors": {"overdues": "no overdues found"}}
+    end
+
+  end
+
+private
   def rental_params
     params.permit(:customer_id, :movie_id)
   end
+
 end

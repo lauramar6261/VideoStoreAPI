@@ -3,8 +3,8 @@
 one:
   customer: one
   movie: one
-  checkout_date: 2018-11-05
-  due_date: 2018-11-12
+  checkout_date: 2011-11-05
+  due_date: 2011-11-12
   active: true
 
 two:
@@ -17,6 +17,6 @@ two:
 three:
   customer: two
   movie: two
-  checkout_date: 2018-11-05
-  due_date: 2018-11-12
+  checkout_date: 2011-11-05
+  due_date: 2011-11-12
   active: true
