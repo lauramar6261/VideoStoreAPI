@@ -14,27 +14,27 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-11-07T11:21:26-08:00">2018-11-07T11:21:26-08:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-11-07T12:53:05-08:00">2018-11-07T12:53:05-08:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">98.34%</span></span>
+    (<span class="covered_percent"><span class="green">98.8%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         3.54
+         3.51
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>13</b> files in total.
-    <b>482</b> relevant lines. 
-    <span class="green"><b>474</b> lines covered</span> and
-    <span class="red"><b>8</b> lines missed </span>
+    <b>499</b> relevant lines. 
+    <span class="green"><b>493</b> lines covered</span> and
+    <span class="red"><b>6</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -57,7 +57,7 @@
         <td>20</td>
         <td>20</td>
         <td>0</td>
-        <td>33.2</td>
+        <td>33.5</td>
       </tr>
       
       <tr>
@@ -82,12 +82,12 @@
       
       <tr>
         <td class="strong"><a href="#fa219c1c6cc6d6b5f6393b6ca3c9ac867fa30d75" class="src_link" title="app/controllers/rentals_controller.rb">app/controllers/rentals_controller.rb</a></td>
-        <td class="yellow strong">88.64 %</td>
+        <td class="green strong">93.18 %</td>
         <td>84</td>
         <td>44</td>
-        <td>39</td>
-        <td>5</td>
-        <td>5.5</td>
+        <td>41</td>
+        <td>3</td>
+        <td>5.9</td>
       </tr>
       
       <tr>
@@ -143,9 +143,9 @@
       <tr>
         <td class="strong"><a href="#64b4e4f8a39d13ac3791bcc155f647670e517b0a" class="src_link" title="test/controllers/rentals_controller_test.rb">test/controllers/rentals_controller_test.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>147</td>
-        <td>81</td>
-        <td>81</td>
+        <td>179</td>
+        <td>98</td>
+        <td>98</td>
         <td>0</td>
         <td>1.5</td>
       </tr>
@@ -336,8 +336,8 @@
           <code class="ruby">  def sort_param</code>
         </li>
       
-        <li class="covered" data-hits="233" data-linenumber="22">
-          <span class="hits">233</span>
+        <li class="covered" data-hits="235" data-linenumber="22">
+          <span class="hits">235</span>
           
           <code class="ruby">    params[:sort]</code>
         </li>
@@ -360,8 +360,8 @@
           <code class="ruby">  def page_param</code>
         </li>
       
-        <li class="covered" data-hits="60" data-linenumber="26">
-          <span class="hits">60</span>
+        <li class="covered" data-hits="62" data-linenumber="26">
+          <span class="hits">62</span>
           
           <code class="ruby">    if params[:p].to_i &gt; 0</code>
         </li>
@@ -408,8 +408,8 @@
           <code class="ruby">  def num_page_param</code>
         </li>
       
-        <li class="covered" data-hits="101" data-linenumber="34">
-          <span class="hits">101</span>
+        <li class="covered" data-hits="103" data-linenumber="34">
+          <span class="hits">103</span>
           
           <code class="ruby">    if params[:n].to_i &gt; 0</code>
         </li>
@@ -1312,11 +1312,11 @@
         <div class="source_table" id="fa219c1c6cc6d6b5f6393b6ca3c9ac867fa30d75">
   <div class="header">
     <h3>app/controllers/rentals_controller.rb</h3>
-    <h4><span class="yellow">88.64 %</span> covered</h4>
+    <h4><span class="green">93.18 %</span> covered</h4>
     <div>
       <b>44</b> relevant lines. 
-      <span class="green"><b>39</b> lines covered</span> and
-      <span class="red"><b>5</b> lines missed.</span>
+      <span class="green"><b>41</b> lines covered</span> and
+      <span class="red"><b>3</b> lines missed.</span>
     </div>
   </div>
   
@@ -1335,8 +1335,8 @@
           <code class="ruby">  def checkout</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="3">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="5" data-linenumber="3">
+          <span class="hits">5</span>
           
           <code class="ruby">    movie = Movie.find_by(id: rental_params[:movie_id])</code>
         </li>
@@ -1347,16 +1347,16 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="5">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="5" data-linenumber="5">
+          <span class="hits">5</span>
           
           <code class="ruby">    if !movie</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="6">
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      render json: {&quot;errors&quot;: {&quot;movie&quot;: [&quot;Movie not found&quot;]}}, status: :bad_request</code>
+          <code class="ruby">      render json: {&quot;errors&quot;: {&quot;movie&quot;: [&quot;Movie not found&quot;]}}, status: :not_found</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="7">
@@ -1371,14 +1371,14 @@
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="9">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="9">
+          <span class="hits">4</span>
           
           <code class="ruby">      customer = Customer.find_by(id: rental_params[:customer_id])</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="10">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="10">
+          <span class="hits">4</span>
           
           <code class="ruby">      if !customer</code>
         </li>
@@ -1386,7 +1386,7 @@
         <li class="covered" data-hits="1" data-linenumber="11">
           <span class="hits">1</span>
           
-          <code class="ruby">        render json: {&quot;errors&quot;: {&quot;customer&quot;: [&quot;Customer not found&quot;]}}, status: :bad_request</code>
+          <code class="ruby">        render json: {&quot;errors&quot;: {&quot;customer&quot;: [&quot;Customer not found&quot;]}}, status: :not_found</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="12">
@@ -1395,20 +1395,20 @@
           <code class="ruby">      else</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="13">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="13">
+          <span class="hits">3</span>
           
           <code class="ruby">        checkout_date = Date.today</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="14">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="14">
+          <span class="hits">3</span>
           
           <code class="ruby">        due_date = checkout_date + 7</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="15">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="15">
+          <span class="hits">3</span>
           
           <code class="ruby">        rental = Rental.new(customer: customer, checkout_date: checkout_date, due_date: due_date, movie: movie)</code>
         </li>
@@ -1419,8 +1419,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="17">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="17">
+          <span class="hits">3</span>
           
           <code class="ruby">        if rental.movie.available_inventory &gt; 0</code>
         </li>
@@ -1491,8 +1491,8 @@
           <code class="ruby">        else</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="29">
-          
+        <li class="covered" data-hits="1" data-linenumber="29">
+          <span class="hits">1</span>
           
           <code class="ruby">          render json: {&quot;errors&quot;: {&quot;movie&quot;: [&quot;#{movie.title} is out of stock&quot;]}}, status: :bad_request</code>
         </li>
@@ -1803,8 +1803,8 @@
           <code class="ruby">  def rental_params</code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="81">
-          <span class="hits">12</span>
+        <li class="covered" data-hits="15" data-linenumber="81">
+          <span class="hits">15</span>
           
           <code class="ruby">    params.permit(:customer_id, :movie_id)</code>
         </li>
@@ -3102,8 +3102,8 @@
     <h3>test/controllers/rentals_controller_test.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>81</b> relevant lines. 
-      <span class="green"><b>81</b> lines covered</span> and
+      <b>98</b> relevant lines. 
+      <span class="green"><b>98</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -3135,8 +3135,8 @@
           <code class="ruby">  let(:rental_params) {</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="5">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="8" data-linenumber="5">
+          <span class="hits">8</span>
           
           <code class="ruby">                      {</code>
         </li>
@@ -3402,7 +3402,7 @@
         <li class="covered" data-hits="1" data-linenumber="49">
           <span class="hits">1</span>
           
-          <code class="ruby">      must_respond_with :bad_request</code>
+          <code class="ruby">      must_respond_with :not_found</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="50">
@@ -3414,19 +3414,19 @@
         <li class="never" data-hits="" data-linenumber="51">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="52">
+        <li class="covered" data-hits="1" data-linenumber="52">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">    it &quot;responds with not found given an invalid movie&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="53">
           <span class="hits">1</span>
           
-          <code class="ruby">  describe &quot;checkin&quot; do</code>
+          <code class="ruby">      rental_params[:movie_id] = -1</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="54">
@@ -3438,31 +3438,31 @@
         <li class="covered" data-hits="1" data-linenumber="55">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &quot;checkin path is a working route and returns JSON&quot; do</code>
+          <code class="ruby">      expect {</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="56">
           <span class="hits">1</span>
           
-          <code class="ruby">      post checkin_path params: rental_params</code>
+          <code class="ruby">            post checkout_path, params: rental_params</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="57">
+        <li class="never" data-hits="" data-linenumber="57">
+          
+          
+          <code class="ruby">          }.wont_change &quot;Rental.count&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="58">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="59">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(response.header[&#39;Content-Type&#39;]).must_include &#39;json&#39;</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="58">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      must_respond_with :success</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="59">
-          
-          
-          <code class="ruby">    end</code>
+          <code class="ruby">      body = JSON.parse(response.body)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="60">
@@ -3474,73 +3474,73 @@
         <li class="covered" data-hits="1" data-linenumber="61">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &quot;checkin works with valid data&quot; do</code>
+          <code class="ruby">      expect(body).must_be_kind_of Hash</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="62">
+        <li class="covered" data-hits="1" data-linenumber="62">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      # undefined active</code>
+          <code class="ruby">      expect(body[&quot;errors&quot;]).must_include &quot;movie&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="63">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect {</code>
+          <code class="ruby">      must_respond_with :not_found</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="64">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          post checkin_path, params: rental_params</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="65">
-          
-          
-          <code class="ruby">        }.wont_change &quot;Rental.count&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="66">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="67">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      body = JSON.parse(response.body)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="68">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      expect(body).must_include &quot;id&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="69">
+        <li class="never" data-hits="" data-linenumber="64">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="70">
+        <li class="never" data-hits="" data-linenumber="65">
           
           
           <code class="ruby"></code>
         </li>
       
+        <li class="covered" data-hits="1" data-linenumber="66">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;responds with bad request if the movie is out of stock&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="67">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      movies(:one).available_inventory = 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="68">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      movies(:one).save</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="69">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="70">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect {</code>
+        </li>
+      
         <li class="covered" data-hits="1" data-linenumber="71">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &quot;checkin does not work with invalid data&quot; do</code>
+          <code class="ruby">            post checkout_path params: rental_params</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="72">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="72">
           
-          <code class="ruby">      rental_params[:customer_id] = nil</code>
+          
+          <code class="ruby">          }.wont_change &quot;Rental.count&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="73">
@@ -3552,31 +3552,31 @@
         <li class="covered" data-hits="1" data-linenumber="74">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect {</code>
+          <code class="ruby">      body = JSON.parse(response.body)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="75">
-          <span class="hits">1</span>
-          
-          <code class="ruby">            post checkin_path params: rental_params</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="76">
-          
-          
-          <code class="ruby">          }.wont_change &quot;Rental.count&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="77">
+        <li class="never" data-hits="" data-linenumber="75">
           
           
           <code class="ruby"></code>
         </li>
       
+        <li class="covered" data-hits="1" data-linenumber="76">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(body).must_be_kind_of Hash</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="77">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(body[&quot;errors&quot;]).must_include &quot;movie&quot;</code>
+        </li>
+      
         <li class="covered" data-hits="1" data-linenumber="78">
           <span class="hits">1</span>
           
-          <code class="ruby">      body = JSON.parse(response.body)</code>
+          <code class="ruby">      must_respond_with :bad_request</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="79">
@@ -3585,310 +3585,310 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="80">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="80">
           
-          <code class="ruby">      expect(body).must_be_kind_of Hash</code>
+          
+          <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="81">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="81">
           
-          <code class="ruby">      expect(body[&quot;errors&quot;]).must_include &quot;rental&quot;</code>
+          
+          <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="82">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="82">
           
-          <code class="ruby">      must_respond_with :bad_request</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="83">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="84">
           
           
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="85">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="86">
+        <li class="covered" data-hits="1" data-linenumber="85">
           <span class="hits">1</span>
           
-          <code class="ruby">  describe &quot;overdue&quot; do</code>
+          <code class="ruby">  describe &quot;checkin&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="87">
-          <span class="hits">3</span>
-          
-          <code class="ruby">    let (:keys) {%w(checkout_date customer_id due_date movie_id name postal_code title)}</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="88">
+        <li class="never" data-hits="" data-linenumber="86">
           
           
           <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="87">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;checkin path is a working route and returns JSON&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="88">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      post checkin_path params: rental_params</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="89">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &#39;renders json&#39; do</code>
+          <code class="ruby">      expect(response.header[&#39;Content-Type&#39;]).must_include &#39;json&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="90">
           <span class="hits">1</span>
           
-          <code class="ruby">      get overdue_path</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="91">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      expect(response.header[&#39;Content-Type&#39;]).must_include &#39;json&#39;</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="92">
-          <span class="hits">1</span>
-          
           <code class="ruby">      must_respond_with :success</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="93">
+        <li class="never" data-hits="" data-linenumber="91">
           
           
           <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="92">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="93">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;checkin works with valid data&quot; do</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="94">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">      # undefined active</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="95">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &quot;returns an Array&quot; do</code>
+          <code class="ruby">      expect {</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="96">
           <span class="hits">1</span>
           
-          <code class="ruby">      get overdue_path</code>
+          <code class="ruby">          post checkin_path, params: rental_params</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="97">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="97">
           
-          <code class="ruby">      body = JSON.parse(response.body)</code>
+          
+          <code class="ruby">        }.wont_change &quot;Rental.count&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="98">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      expect(body).must_be_kind_of Array</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="99">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="100">
+        <li class="never" data-hits="" data-linenumber="98">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="101">
+        <li class="covered" data-hits="1" data-linenumber="99">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &quot;returns all of the overdue rentals&quot; do</code>
+          <code class="ruby">      body = JSON.parse(response.body)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="102">
+        <li class="covered" data-hits="1" data-linenumber="100">
           <span class="hits">1</span>
           
-          <code class="ruby">      get overdue_path</code>
+          <code class="ruby">      expect(body).must_include &quot;id&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="101">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="102">
+          
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="103">
           <span class="hits">1</span>
           
-          <code class="ruby">      body = JSON.parse(response.body)</code>
+          <code class="ruby">    it &quot;checkin does not work with invalid data&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="104">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(body.length).must_equal Rental.where([&quot;active = ? and due_date &lt; ?&quot;, true, Date.today]).count</code>
+          <code class="ruby">      rental_params[:customer_id] = nil</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="105">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="106">
+        <li class="covered" data-hits="1" data-linenumber="106">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">      expect {</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="107">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &quot;returns overdues with exactly the required keys&quot; do</code>
+          <code class="ruby">            post checkin_path params: rental_params</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="108">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">          }.wont_change &quot;Rental.count&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="109">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      get overdue_path</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="110">
+        <li class="never" data-hits="" data-linenumber="109">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="111">
+        <li class="covered" data-hits="1" data-linenumber="110">
           <span class="hits">1</span>
           
           <code class="ruby">      body = JSON.parse(response.body)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="112">
+        <li class="never" data-hits="" data-linenumber="111">
           
           
           <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="112">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(body).must_be_kind_of Hash</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="113">
           <span class="hits">1</span>
           
-          <code class="ruby">      body.each do |overdue|</code>
+          <code class="ruby">      expect(body[&quot;errors&quot;]).must_include &quot;rental&quot;</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="114">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="1" data-linenumber="114">
+          <span class="hits">1</span>
           
-          <code class="ruby">        expect(overdue.keys.sort).must_equal keys</code>
+          <code class="ruby">      must_respond_with :bad_request</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="115">
-          <span class="hits">3</span>
-          
-          <code class="ruby">        expect(overdue.keys.length).must_equal keys.length</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="116">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="117">
-          
-          
-          <code class="ruby">      end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="118">
+        <li class="never" data-hits="" data-linenumber="115">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="119">
+        <li class="never" data-hits="" data-linenumber="116">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="117">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="120">
+        <li class="covered" data-hits="1" data-linenumber="118">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &quot;returns a message if there are no overdues&quot; do</code>
+          <code class="ruby">  describe &quot;overdue&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="119">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    let (:keys) {%w(checkout_date customer_id due_date movie_id name postal_code title)}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="120">
+          
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="121">
           <span class="hits">1</span>
           
-          <code class="ruby">      overdues = Rental.where([&quot;active = ? and due_date &lt; ?&quot;, true, Date.today])</code>
+          <code class="ruby">    it &#39;renders json&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="122">
           <span class="hits">1</span>
           
-          <code class="ruby">      overdues.each do |overdue|</code>
+          <code class="ruby">      get overdue_path</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="123">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="1" data-linenumber="123">
+          <span class="hits">1</span>
           
-          <code class="ruby">        overdue.destroy</code>
+          <code class="ruby">      expect(response.header[&#39;Content-Type&#39;]).must_include &#39;json&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="124">
+        <li class="covered" data-hits="1" data-linenumber="124">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      end</code>
+          <code class="ruby">      must_respond_with :success</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="125">
           
           
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="126">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="126">
+        <li class="covered" data-hits="1" data-linenumber="127">
           <span class="hits">1</span>
           
-          <code class="ruby">      get overdue_path</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="127">
-          
-          
-          <code class="ruby"></code>
+          <code class="ruby">    it &quot;returns an Array&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="128">
           <span class="hits">1</span>
           
-          <code class="ruby">      body = JSON.parse(response.body)</code>
+          <code class="ruby">      get overdue_path</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="129">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(body[&quot;errors&quot;]).must_include &quot;overdues&quot;</code>
+          <code class="ruby">      body = JSON.parse(response.body)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="130">
+        <li class="covered" data-hits="1" data-linenumber="130">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">      expect(body).must_be_kind_of Array</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="131">
@@ -3906,31 +3906,31 @@
         <li class="covered" data-hits="1" data-linenumber="133">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &quot;sorts overdues on any key&quot; do</code>
+          <code class="ruby">    it &quot;returns all of the overdue rentals&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="134">
           <span class="hits">1</span>
           
-          <code class="ruby">      keys.each do |key|</code>
+          <code class="ruby">      get overdue_path</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="135">
-          <span class="hits">7</span>
-          
-          <code class="ruby">      get overdue_path, params: {&quot;sort&quot; =&gt; key}</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="136">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="7" data-linenumber="137">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="1" data-linenumber="135">
+          <span class="hits">1</span>
           
           <code class="ruby">      body = JSON.parse(response.body)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="136">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(body.length).must_equal Rental.where([&quot;active = ? and due_date &lt; ?&quot;, true, Date.today]).count</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="137">
+          
+          
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="138">
@@ -3939,34 +3939,34 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="139">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="1" data-linenumber="139">
+          <span class="hits">1</span>
           
-          <code class="ruby">        (body.length - 1).times do |i|</code>
+          <code class="ruby">    it &quot;returns overdues with exactly the required keys&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="14" data-linenumber="140">
-          <span class="hits">14</span>
+        <li class="never" data-hits="" data-linenumber="140">
           
-          <code class="ruby">          expect(body[i][key]).must_be :&lt;=, body[i+1][key]</code>
+          
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="141">
+        <li class="covered" data-hits="1" data-linenumber="141">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">        end</code>
+          <code class="ruby">      get overdue_path</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="142">
           
           
-          <code class="ruby">      end</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="143">
+        <li class="covered" data-hits="1" data-linenumber="143">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    end</code>
+          <code class="ruby">      body = JSON.parse(response.body)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="144">
@@ -3975,19 +3975,211 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="145">
+        <li class="covered" data-hits="1" data-linenumber="145">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">      body.each do |overdue|</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="146">
+        <li class="covered" data-hits="3" data-linenumber="146">
+          <span class="hits">3</span>
+          
+          <code class="ruby">        expect(overdue.keys.sort).must_equal keys</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="147">
+          <span class="hits">3</span>
+          
+          <code class="ruby">        expect(overdue.keys.length).must_equal keys.length</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="148">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="147">
+        <li class="never" data-hits="" data-linenumber="149">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="150">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="151">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="152">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;returns a message if there are no overdues&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="153">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      overdues = Rental.where([&quot;active = ? and due_date &lt; ?&quot;, true, Date.today])</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="154">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      overdues.each do |overdue|</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="155">
+          <span class="hits">3</span>
+          
+          <code class="ruby">        overdue.destroy</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="156">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="157">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="158">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      get overdue_path</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="159">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="160">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      body = JSON.parse(response.body)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="161">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(body[&quot;errors&quot;]).must_include &quot;overdues&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="162">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="163">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="164">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="165">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;sorts overdues on any key&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="166">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      keys.each do |key|</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="167">
+          <span class="hits">7</span>
+          
+          <code class="ruby">      get overdue_path, params: {&quot;sort&quot; =&gt; key}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="168">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="169">
+          <span class="hits">7</span>
+          
+          <code class="ruby">      body = JSON.parse(response.body)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="170">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="171">
+          <span class="hits">7</span>
+          
+          <code class="ruby">        (body.length - 1).times do |i|</code>
+        </li>
+      
+        <li class="covered" data-hits="14" data-linenumber="172">
+          <span class="hits">14</span>
+          
+          <code class="ruby">          expect(body[i][key]).must_be :&lt;=, body[i+1][key]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="173">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="174">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="175">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="176">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="177">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="178">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="179">
           
           
           <code class="ruby">end</code>

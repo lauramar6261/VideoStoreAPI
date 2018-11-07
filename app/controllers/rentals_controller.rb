@@ -3,12 +3,12 @@ class RentalsController < ApplicationController
     movie = Movie.find_by(id: rental_params[:movie_id])
 
     if !movie
-      render json: {"errors": {"movie": ["Movie not found"]}}, status: :bad_request
+      render json: {"errors": {"movie": ["Movie not found"]}}, status: :not_found
 
     else
       customer = Customer.find_by(id: rental_params[:customer_id])
       if !customer
-        render json: {"errors": {"customer": ["Customer not found"]}}, status: :bad_request
+        render json: {"errors": {"customer": ["Customer not found"]}}, status: :not_found
       else
         checkout_date = Date.today
         due_date = checkout_date + 7

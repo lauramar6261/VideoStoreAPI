@@ -46,8 +46,40 @@ describe RentalsController do
 
       expect(body).must_be_kind_of Hash
       expect(body["errors"]).must_include "customer"
-      must_respond_with :bad_request
+      must_respond_with :not_found
     end
+
+    it "responds with not found given an invalid movie" do
+      rental_params[:movie_id] = -1
+
+      expect {
+            post checkout_path, params: rental_params
+          }.wont_change "Rental.count"
+
+      body = JSON.parse(response.body)
+
+      expect(body).must_be_kind_of Hash
+      expect(body["errors"]).must_include "movie"
+      must_respond_with :not_found
+    end
+
+    it "responds with bad request if the movie is out of stock" do
+      movies(:one).available_inventory = 0
+      movies(:one).save
+
+      expect {
+            post checkout_path params: rental_params
+          }.wont_change "Rental.count"
+
+      body = JSON.parse(response.body)
+
+      expect(body).must_be_kind_of Hash
+      expect(body["errors"]).must_include "movie"
+      must_respond_with :bad_request
+
+    end
+
+
   end
 
   describe "checkin" do
